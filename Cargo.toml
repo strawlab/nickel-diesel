@@ -1,0 +1,17 @@
+[package]
+name = "nickel-diesel"
+version = "0.1.0"
+license = "MIT"
+authors = ["Andrew Straw <strawman@astraw.com>",
+  "Robert Yokota <ryokota@yammer-inc.com>"]
+description = "Nickel middleware providing a diesel ORM with r2d2 connection pooling"
+repository = "https://github.com/strawlab/nickel-diesel"
+readme = "README.md"
+
+[dependencies]
+nickel = "0.7.3"
+postgres = "0.11.3"
+r2d2 = "0.6.3"
+r2d2-diesel = "0.5.0"
+plugin = "0.2.6"
+typemap = "0.3.3"
