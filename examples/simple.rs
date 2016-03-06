@@ -1,13 +1,9 @@
 #[macro_use]
 extern crate nickel;
 extern crate nickel_diesel;
-extern crate plugin;
-extern crate typemap;
-
 extern crate diesel;
 extern crate r2d2;
 extern crate r2d2_diesel;
-extern crate postgres;
 
 use r2d2::{NopErrorHandler, PooledConnection};
 use r2d2_diesel::{ConnectionManager};
