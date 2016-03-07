@@ -1,4 +1,4 @@
-use std::marker::Reflect;
+use std::any::Any;
 
 use std::sync::Arc;
 use std::error::Error as StdError;
@@ -12,13 +12,13 @@ use diesel::{Connection};
 
 
 pub struct DieselMiddleware<T> where
-    T: Connection + Send + Reflect + 'static
+    T: Connection + Send + Any
 {
     pub pool: Arc<Pool<ConnectionManager<T>>>
 }
 
 impl<T> DieselMiddleware<T> where
-    T: Connection + Send + Reflect + 'static
+    T: Connection + Send + Any
 {
     pub fn new(connect_str: &str,
                num_connections: u32,
@@ -38,13 +38,13 @@ impl<T> DieselMiddleware<T> where
 }
 
 impl<T> Key for DieselMiddleware<T> where
-   T: Connection + Send + Reflect + 'static
+   T: Connection + Send + Any
 {
     type Value = Arc<Pool<ConnectionManager<T>>>;
 }
 
 impl<T, D> Middleware<D> for DieselMiddleware<T> where
-   T: Connection + Send + Reflect + 'static
+   T: Connection + Send + Any
 {
     fn invoke<'mw, 'conn>(&self, req: &mut Request<'mw, 'conn, D>, res: Response<'mw, D>) -> MiddlewareResult<'mw, D> {
         req.extensions_mut().insert::<DieselMiddleware<T>>(self.pool.clone());
@@ -53,13 +53,13 @@ impl<T, D> Middleware<D> for DieselMiddleware<T> where
 }
 
 pub trait DieselRequestExtensions<T> where
-   T: Connection + Send + Reflect + 'static
+   T: Connection + Send + Any
 {
     fn db_conn(&self) -> PooledConnection<ConnectionManager<T>>;
 }
 
 impl<'a, 'b, T, D> DieselRequestExtensions<T> for Request<'a, 'b, D> where
-   T: Connection + Send + Reflect + 'static
+   T: Connection + Send + Any
 {
     fn db_conn(&self) -> PooledConnection<ConnectionManager<T>> {
         self.extensions().get::<DieselMiddleware<T>>().unwrap().get().unwrap()

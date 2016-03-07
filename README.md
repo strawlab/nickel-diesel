@@ -6,6 +6,3 @@ Nickel middleware providing a [diesel ORM](diesel.rs) with
 Code originally by Robert Yokota as part of the [Yeoman generator for AngularJS +
 Nickel](https://github.com/rayokota/generator-angular-nickel/) project. Packaged
 by Andrew Straw.
-
-Due to the use of `#![feature(reflect_marker)]`, this package currently requires
-rust nightly.

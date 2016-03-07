@@ -1,5 +1,3 @@
-#![feature(reflect_marker)]
-
 extern crate nickel;
 extern crate r2d2;
 extern crate diesel;
