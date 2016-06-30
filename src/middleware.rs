@@ -35,6 +35,10 @@ impl<T> DieselMiddleware<T> where
 
         Ok(DieselMiddleware { pool: Arc::new(pool) })
     }
+
+    pub fn from_pool(pool: Pool<ConnectionManager<T>>) -> DieselMiddleware<T> {
+        DieselMiddleware { pool: Arc::new(pool) }
+    }
 }
 
 impl<T> Key for DieselMiddleware<T> where
