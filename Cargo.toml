@@ -16,6 +16,9 @@ r2d2-diesel = "0.6.0"
 plugin = "0.2.6"
 typemap = "0.3.3"
 
+[dev-dependencies]
+dotenv = "0.8.0"
+
 [dependencies.diesel]
 version = "0.6.0"
 default-features = false

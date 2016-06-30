@@ -4,6 +4,7 @@ extern crate nickel_diesel;
 extern crate diesel;
 extern crate r2d2;
 extern crate r2d2_diesel;
+extern crate dotenv;
 
 use r2d2::{NopErrorHandler, PooledConnection};
 use r2d2_diesel::{ConnectionManager};
@@ -27,6 +28,8 @@ fn one<'a> (request: &mut Request, response: Response<'a>) -> MiddlewareResult<'
 }
 
 fn main() {
+    dotenv::dotenv().ok();
+
     let mut server = Nickel::new();
     let mut router = Nickel::router();
 
