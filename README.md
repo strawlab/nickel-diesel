@@ -11,3 +11,18 @@ by Andrew Straw.
 [version-url]: https://crates.io/crates/nickel-diesel
 [status-img]: https://travis-ci.org/strawlab/nickel-diesel.svg?branch=master
 [status-url]: https://travis-ci.org/strawlab/nickel-diesel
+
+## example
+
+Run an example server:
+
+    cargo run --example simple_sqlite_memory
+
+Running the server will show
+
+    Listening on http://127.0.0.1:9001
+    Ctrl-C to shutdown server
+
+The server can be tested with
+
+    curl http://localhost:9001/one
