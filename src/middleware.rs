@@ -7,7 +7,7 @@ use nickel::{Request, Response, Middleware, Continue, MiddlewareResult};
 use r2d2_diesel::{ConnectionManager};
 use r2d2::{Pool, HandleError, Config, PooledConnection};
 use typemap::{Key};
-use plugin::{Pluggable, Extensible};
+use plugin::Extensible;
 use diesel::{Connection};
 
 
