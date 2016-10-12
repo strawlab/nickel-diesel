@@ -49,5 +49,5 @@ fn main() {
     let serve_port_str = env::var("SERVE_PORT").unwrap_or("9000".to_owned());
     let serve_port = serve_port_str.parse::<u16>().unwrap();
 
-    server.listen((&*serve_host,serve_port));
+    server.listen((&*serve_host,serve_port)).unwrap();
 }

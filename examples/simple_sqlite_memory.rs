@@ -39,5 +39,5 @@ fn main() {
     let serve_host = "127.0.0.1";
     let serve_port = 9001;
 
-    server.listen((&*serve_host, serve_port));
+    server.listen((&*serve_host, serve_port)).unwrap();
 }
