@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.5.0] - 2017-01-19
+
+* Updated `diesel` to 0.9.
+* Updated `postgres` to 0.13.
+* Updated `r2d2-diesel` to 0.9.
+
 ## [0.4.0] - 2016-10-12
 
 * Updated `nickel` to 0.9.
