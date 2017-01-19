@@ -1,4 +1,4 @@
-# nickel-diesel [![Version][version-img]][version-url] [![Status][status-img]][status-url]
+# nickel-diesel [![Version][version-img]][version-url] [![Status][status-img]][status-url] [![Doc][doc-img]][doc-url]
 
 Nickel middleware providing a [diesel ORM](diesel.rs) with
 [r2d2](https://github.com/sfackler/r2d2) connection pooling
@@ -11,6 +11,8 @@ by Andrew Straw.
 [version-url]: https://crates.io/crates/nickel-diesel
 [status-img]: https://travis-ci.org/strawlab/nickel-diesel.svg?branch=master
 [status-url]: https://travis-ci.org/strawlab/nickel-diesel
+[doc-img]: https://docs.rs/nickel-diesel/badge.svg
+[doc-url]: https://docs.rs/nickel-diesel
 
 ## example
 

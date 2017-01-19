@@ -6,6 +6,8 @@ authors = ["Andrew Straw <strawman@astraw.com>",
   "Robert Yokota <ryokota@yammer-inc.com>"]
 description = "Nickel middleware providing a diesel ORM with r2d2 connection pooling"
 repository = "https://github.com/strawlab/nickel-diesel"
+documentation = "https://docs.rs/nickel-diesel"
+keywords = ["diesel", "nickel", "database", "middleware"]
 readme = "README.md"
 
 [dependencies]
