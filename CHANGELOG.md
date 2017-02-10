@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.6.0] - 2017-02-10
+
+* Updated `diesel` to 0.10.
+* Updated `r2d2-diesel` to 0.10.
+
 ## [0.5.0] - 2017-01-19
 
 * Updated `diesel` to 0.9.
