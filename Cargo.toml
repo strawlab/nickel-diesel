@@ -9,6 +9,7 @@ repository = "https://github.com/strawlab/nickel-diesel"
 documentation = "https://docs.rs/nickel-diesel"
 keywords = ["diesel", "nickel", "database", "middleware"]
 readme = "README.md"
+categories = ["database", "web-programming", "web-programming::http-server"]
 
 [dependencies]
 nickel = "0.9.0"
