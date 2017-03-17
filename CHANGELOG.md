@@ -1,6 +1,6 @@
 # Change Log
 
-## unreleased
+## [0.7.0] - 2017-03-17
 
 * Updated `diesel` to 0.12.
 * Updated `r2d2-diesel` to 0.12.

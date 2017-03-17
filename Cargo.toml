@@ -1,6 +1,6 @@
 [package]
 name = "nickel-diesel"
-version = "0.6.0"
+version = "0.7.0"
 license = "MIT"
 authors = ["Andrew Straw <strawman@astraw.com>",
   "Robert Yokota <ryokota@yammer-inc.com>"]
