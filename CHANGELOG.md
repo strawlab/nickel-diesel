@@ -1,5 +1,11 @@
 # Change Log
 
+## unreleased
+
+* Updated `diesel` to 0.12.
+* Updated `r2d2-diesel` to 0.12.
+* Updated `postgres` to 0.14.
+
 ## [0.6.0] - 2017-02-10
 
 * Updated `diesel` to 0.10.
