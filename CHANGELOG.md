@@ -1,6 +1,6 @@
 # Change Log
 
-## unreleased
+## [0.8.0] - 2018-01-02
 
 * Updated `nickel` to 0.10.
 * Updated `diesel` to 0.99.
