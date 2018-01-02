@@ -6,7 +6,7 @@ extern crate r2d2;
 extern crate r2d2_diesel;
 
 use r2d2_diesel::ConnectionManager;
-use r2d2::{Pool, NopErrorHandler, Config};
+use r2d2::{Pool, NopErrorHandler};
 
 use nickel::Nickel;
 use nickel_diesel::DieselMiddleware;
@@ -28,12 +28,10 @@ fn test_sqlite_middleware_from_pool() {
 
     let manager = ConnectionManager::<SqliteConnection>::new(database_url);
 
-    let config = Config::builder()
-        .pool_size(5)
+    let pool = Pool::builder()
+        .max_size(5)
         .error_handler(Box::new(NopErrorHandler))
-        .build();
-
-    let pool = Pool::new(config, manager).unwrap();
+        .build(manager).unwrap();
     let diesel_mw = DieselMiddleware::from_pool(pool);
     server.utilize(diesel_mw);
 }

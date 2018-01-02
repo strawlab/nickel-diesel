@@ -5,7 +5,7 @@ use std::error::Error as StdError;
 
 use nickel::{Request, Response, Middleware, Continue, MiddlewareResult};
 use r2d2_diesel::{ConnectionManager};
-use r2d2::{Pool, HandleError, Config, PooledConnection};
+use r2d2::{Pool, HandleError, PooledConnection};
 use typemap::{Key};
 use plugin::Extensible;
 use diesel::{Connection};
@@ -26,12 +26,10 @@ impl<T> DieselMiddleware<T> where
                     -> Result<DieselMiddleware<T>, Box<StdError>> {
         let manager = ConnectionManager::<T>::new(connect_str);
 
-        let config = Config::builder()
-          .pool_size(num_connections)
-          .error_handler(error_handler)
-          .build();
-
-        let pool = try!(Pool::new(config, manager));
+        let pool = Pool::builder()
+            .max_size(num_connections)
+            .error_handler(error_handler)
+            .build(manager)?;
 
         Ok(DieselMiddleware { pool: Arc::new(pool) })
     }

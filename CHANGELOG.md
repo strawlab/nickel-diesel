@@ -1,5 +1,14 @@
 # Change Log
 
+## unreleased
+
+* Updated `nickel` to 0.10.
+* Updated `diesel` to 0.99.
+* Updated `r2d2` to 0.8.
+* Updated `r2d2-diesel` to 0.99.
+* Updated `postgres` to 0.15.
+* Updated `dotenv` to 0.10.
+
 ## [0.7.0] - 2017-03-17
 
 * Updated `diesel` to 0.12.
