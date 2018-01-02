@@ -19,7 +19,7 @@ fn one<'a>(request: &mut Request, response: Response<'a>) -> MiddlewareResult<'a
     // Presumably you would use your auto-generated schema code to perform a database query. For
     // this example, we don't want to require codegen and thus we execute an SQL statement without
     // much benefit from the ORM.
-    let result = connection.execute("SELECT 1").unwrap();
+    let result = connection.execute("SELECT 1").unwrap(); // returns 0 because no rows affected
     response.send(format!("{}", result))
 }
 
