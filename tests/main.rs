@@ -1,4 +1,3 @@
-#[macro_use]
 extern crate nickel;
 extern crate nickel_diesel;
 extern crate diesel;
