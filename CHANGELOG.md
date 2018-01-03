@@ -1,5 +1,10 @@
 # Change Log
 
+## unreleased
+
+* Updated `diesel` to 1.
+* Updated `r2d2-diesel` to 1.
+
 ## [0.8.0] - 2018-01-02
 
 * Updated `nickel` to 0.10.
