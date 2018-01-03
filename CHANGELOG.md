@@ -1,6 +1,6 @@
 # Change Log
 
-## unreleased
+## [0.9.0] - 2018-01-03
 
 * Updated `diesel` to 1.
 * Updated `r2d2-diesel` to 1.
